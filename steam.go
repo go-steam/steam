@@ -1,10 +1,14 @@
 // steam.go
+// +build linux,amd64 windows,amd64
 
 package steam
 
 /*
-#cgo CFLAGS: -I$GOPATH/steamworks_sdk_128/public/steam
-#cgo amd64 !windows LDFLAGS: -L$GOPATH/steamworks_sdk_128/redistributable_bin/linux64 -lsteam_api
+#cgo linux amd64 LDFLAGS: -L$GOPATH/steamworks_sdk_128/redistributable_bin/linux64 -lsteam_api
+#cgo linux 386 LDFLAGS: -L$GOPATH/steamworks_sdk_128/redistributable_bin/linux32
+#cgo darwin LDFLAGS: -L$GOPATH/steamworks_sdk_128/redistributable_bin/osx32
+#cgo windows amd64 LDFLAGS: -L$GOPATH/steamworks_sdk_128/redistributable_bin/win64
+#cgo windows 386 LDFLAGS: -L$GOPATH/steamworks_sdk_128/redistributable_bin
 #cgo windows CFLAGS: -DIS_WINDOWS=1
 #cgo !windows CFLAGS: -DIS_WINDOWS=0 -DSTEAM_API_NODLL
 #include "wrapper.h"
