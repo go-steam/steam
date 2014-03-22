@@ -21,6 +21,7 @@ Installation
 ------------
 
 We currently support only steamworks_sdk_129
+
 		$ go get github.com/go-steam/steam
 
 Begin by: 
