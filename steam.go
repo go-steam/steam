@@ -2,10 +2,13 @@
 
 package steam
 
-// #cgo CFLAGS: -I$GOPATH/steamworks_sdk_128/public/steam
-// #cgo LDFLAGS: -L$GOPATH/steamworks_sdk_128/redistributable_bin/linux64 -lsteam_api
-// #define STEAM_API_NODLL
-// #include "wrapper.h"
+/*
+#cgo CFLAGS: -I$GOPATH/steamworks_sdk_128/public/steam
+#cgo amd64 !windows LDFLAGS: -L$GOPATH/steamworks_sdk_128/redistributable_bin/linux64 -lsteam_api
+#cgo windows CFLAGS: -DIS_WINDOWS=1
+#cgo !windows CFLAGS: -DIS_WINDOWS=0 -DSTEAM_API_NODLL
+#include "wrapper.h"
+*/
 import "C"
 
 import (
