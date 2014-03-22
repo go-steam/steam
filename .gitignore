@@ -20,3 +20,13 @@ _cgo_export.*
 _testmain.go
 
 *.exe
+
+# sublime
+go-steam.sublime-project
+go-steam.sublime-workspace
+
+# Steam Api Files
+isteam*.h
+steam*.h
+matchmakingtypes.h
+steam_appid.txt
