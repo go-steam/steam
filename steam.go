@@ -48,8 +48,6 @@ func Init() bool {
 }
 
 //export GoLogFatal
-/*
-func GoLogFatal(s C.CString) {
-	log.Fatal(C.GoString(s))
+func GoLogFatal(s *C.char) {
+	log.Fatalln(C.GoString(s))
 }
-*/

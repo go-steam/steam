@@ -6,7 +6,7 @@
 
 extern "C" {
 	#include "wrapper.h"
-	#include "gosteam.h"
+	#include "_cgo_export.h"
 }
 
 CSteamAPIContext myContext;
@@ -18,7 +18,8 @@ int SteamInit() {
 		return 1;
 	}
 	else
-		return 0;
+		GoLogFatal("SteamAPI_InitSafe failed.");
+	return 0;
 }
 
 int SteamIsSteamRunning() {
