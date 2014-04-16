@@ -7,7 +7,6 @@
 // The steam_api is a c++ product.
 //  wrapper.cpp uses the steam_api.
 //  wrapper.h defines the extern "C" functions used by go.
-//  gosteam.h defines the functions export by go.
 //  steam.go is where we call our steam functions from go.
 //  steam_test.go tests the functions.
 //
@@ -19,9 +18,9 @@
 //
 // Version Control
 //
-// Current Version is v129.0.0.0 and is compatable only with steamworks_sdk_129.
+// Current Version is v1.0.0 and is compatable only with steamworks_sdk_128.
 // We recommend that all developers use version control tags to avoid breaking their project.
-// Our version format is SDK.MAJOR,MINOR,PATCH.
+// Our version format is MAJOR,MINOR,PATCH.
 // We recommend the use of godep to preserve your projects dependencies.
 //
 // For more details about semantic versioning, see the documentation at:
